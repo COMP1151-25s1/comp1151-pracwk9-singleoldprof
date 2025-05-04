@@ -449,19 +449,6 @@ Create a performance efficient timer that gives players a limited time invulnera
 * The health UI should correctly reflect the players current health, and should not tick down outside of their invulnerability window
 * The timer *must not* tick down every frame - this timer should not exist in "Update"
 
-Tasks:
-
-* Download a tilesheet from Kenney.NL (e.g. Tiny Town / Tiny Dungeon)
-* Use multiple layers to represent traversable & solid level architecture.
-* Make a basic tilemap in Tiled.
-* Import your tilemap in to Unity using [SuperTiled2Unity](https://seanba.itch.io/supertiled2unity)
-* Adding TilemapCollider & CompositeColider - Note that the Tile Collider Type in the TSX importer should be set to Sprite as the Grid setting offsets the collider incorrectly.
-* Camera as child of player avatar
-* Add hazards as trigger colliders which cause damage.
-* Add a UI to track damage (as a "score")
-* Using anchors & pivots to position UI elements
-* Test in different screen aspect ratios etc.
-
 ## Completed Tasks
 
 To verify that you've completed all of the content in this prac, check you have done the following:
@@ -469,7 +456,7 @@ To verify that you've completed all of the content in this prac, check you have 
 * Downloaded a tilesheet from Kenney.NL (e.g. Tiny Town / Tiny Dungeon)
 * Made a basic tilemap in Tiled.
 * Imported your tilemap in to Unity using [SuperTiled2Unity](https://seanba.itch.io/supertiled2unity)
-* Added a TilemapCollider & CompositeColider
+* Added a TilemapCollider & Rigidbody 2D to your Tiled Tilemaps
 * Made the camera a child of the player avatar
 * Added hazards as trigger colliders which cause damage
 * Added a UI to track damage [Raw number & Slider]
