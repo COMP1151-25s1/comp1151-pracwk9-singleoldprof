@@ -345,6 +345,8 @@ Save your tilesheet, then place that new tile in your tilemap (on any layer you 
 
 If you were to select the layer on your tilemap, and then expand the parent object completely (Hold `Alt` while clicking the `>` arrow on the layer name), you should notice that there is a new object called `Collision_Hazard`. Selecting the object should also highlight the collision tiles placed in your Scene.
 
+<img src="PracResources\images\xx_TriggerTileHighlight.png">
+
 To test this, add some functionality to your Player Script to check if it is colliding with the "Hazard" layer. You should have a good idea on how to do this already.
 
 Once you've finished developing that, test and see if it works. If it does not, check the following:
