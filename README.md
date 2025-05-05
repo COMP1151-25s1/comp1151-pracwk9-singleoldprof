@@ -463,7 +463,7 @@ To verify that you've completed all of the content in this prac, check you have 
 * Downloaded a tilesheet from Kenney.NL (e.g. Tiny Town / Tiny Dungeon)
 * Made a basic tilemap in Tiled.
 * Imported your tilemap in to Unity using [SuperTiled2Unity](https://seanba.itch.io/supertiled2unity)
-* Added a TilemapCollider & Rigidbody 2D to your Tiled Tilemaps
+* Added a TilemapCollider to your Tiled Tilemaps
 * Made the camera a child of the player avatar
 * Added hazards as trigger colliders which cause damage
 * Added a UI to track damage [Raw number & Slider]
