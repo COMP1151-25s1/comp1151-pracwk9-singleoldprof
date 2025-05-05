@@ -42,7 +42,7 @@ Today we will be using various resources. Their links will be provided in the pr
 
 ## Getting Started with Tiled
 
-To start off todays prac, we will actually not be using Unity. Instead we will be looking at an additional, helpful piece of software where we will be making our Tilemaps, called **Tiled**
+To start off today's prac, we will actually not be using Unity. Instead we will be looking at an additional, helpful piece of software where we will be making our Tilemaps, called **Tiled**
 
 Lab Users -- Tiled should already be installed on the PC, so you can skip this step
 
@@ -72,9 +72,9 @@ Various games have been made with tiled, such as [Shovel Knight](https://www.yac
 
 
 |   |                                                                                                                                                                                                                    Regarding Tiled Instructions                                                                                                                                                                                                                    |   |
-| --- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | --- |
-|   | **Tiled** has a lot of features that we could go into, but unfortunately anything not mentioned in todays prac is simply outside of the scope of this unit (like other types of tilesets). If you are interested in learning more about Tiled, it is recommended that you do your own research by looking into the [Tiled documentation](https://doc.mapeditor.org/en/stable/manual/introduction), as well as looking into the various tutorials available online. |   |
-|   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |   |
+| --- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | --- |
+|   | **Tiled** has a lot of features that we could go into, but unfortunately anything not mentioned in today's prac is simply outside of the scope of this unit (like other types of tilesets). If you are interested in learning more about Tiled, it is recommended that you do your own research by looking into the [Tiled documentation](https://doc.mapeditor.org/en/stable/manual/introduction), as well as looking into the various tutorials available online. |   |
+|   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |   |
 
 ## Getting your practical repository
 
@@ -123,14 +123,13 @@ After creating a **Tiled** "session", you will then be prompted to select your t
 1. Select `New Tileset`
 2. Call this whatever you want - a sensible name would be the same name as the image/tileset (e.g. `TinyDungeon_Tilesheet`)
 3. Click the `Browse` button beside the **Source** field, and navigate to your downloaded tilesheet (the .png file in the .zip folder you downloaded).
-   * Ensure that what you're selecting is a tilesheet, and not simply a single sprite. The tilesheet will be a picture containing all of the possible sprites you can use to make a tilemap. Most of the Kenny.NL packages will have the tilesheets located at ``[PackageName] > Tilesheets > tilemap.png`
+   * Ensure that what you're selecting is a tilesheet, and not simply a single sprite. The tilesheet will be a picture containing all of the possible sprites you can use to make a tilemap. Most of the Kenny.NL packages will have the tilesheets located at `[PackageName] > Tilesheets > tilemap.png`
 4. At this point you will need to set the tile height and width - On the page you downloaded your Kenny.NL asset, it will be listed on the side (Example below)
    * If you are using a Kenny.NL tilesheet, this information is contained in the root of the download, in a text file called `Tilesheet.txt`
 
 <img src="PracResources\images\02_KennyTileSize.png">
 
-* Once you have selected the Create button, you will then be prompted to create a `.tsx` file, bassically a file containing the tilesheet & its associated metadata. Save this inside your `COMP1151_TilemapGame` folder, and give it a meaningful name, like `Tilesheet`.
-
+* Once you have selected the Create button, you will then be prompted to create a `.tsx` file, basically a file containing the tilesheet & its associated metadata. Save this inside your `COMP1151_TilemapGame` folder, and give it a meaningful name, like `Tilesheet`.
 
 |   |                                                                                                                                                                                                      Regarding Tiled Instructions                                                                                                                                                                                                      |   |
 | --- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | --- |
@@ -192,7 +191,7 @@ You can also temporarily "hide" a layer clicking the eye button, next to the nam
 
 Once you have a neat looking level (or a draft of a level), save your tilemap using `Ctrl + S` (or using `File > Save`).
 
-After you have saved it, we will need to import it into Unity. Open up todays Unity Project, and while that opens start following the next section.
+After you have saved it, we will need to import it into Unity. Open up today's Unity Project, and while that opens start following the next section.
 
 ### "Super Tiled2Unity"
 
@@ -219,13 +218,10 @@ After this, the package should be added. Close the popup window, and navigate to
 <img src="PracResources\images\09_TMXandTSX_Unity.png">
 
 
-
-
 |   | Further Reading                                                                                                   |   |
 | --- | ------------------------------------------------------------------------------------------------------------------- | --- |
-|   | Further Documentation on Super Tiled2Unity can be found [here](https://supertiled2unity.readthedocs.io/en/latest/) |   |
+|   | Further Documentation on Super Tiled2Unity can be found[here](https://supertiled2unity.readthedocs.io/en/latest/) |   |
 |   |                                                                                                                   |   |
-
 
 ## Importing your Tilemap into Unity
 
@@ -239,6 +235,7 @@ There are some glaring issues with our scene, but lets put in a Player and start
 
 We have given you a lightweight player script graph already. You are free to use this and change it as you see fit. This can be found in the `Scripts` folder. We have also already set up the `InputActions` asset file in this repository
 
+
 |   | Gamepad Usage                                                                                                                                                                                                    |   |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
 |   | The**InputActions** has been set up with a basic implementation of gamepad support. If you would like to test your game using a controller, feel free to do so (ask your TA about controller access in the labs) |   |
@@ -248,7 +245,7 @@ To implement the player in your scene, you will need to change the following on 
 
 * Attach the Main Camera as a child of the Player
 * Add a sprite to the player - Add a `Sprite Renderer` component, and select one of the player sprites from your tilesheet
-  * If your tilesheet doesn't have one, simply use the `UISprite` image or make the Player from scratch with a 2D primitive shape (Right click the Hierarchy and select `2D Objects > Sprite >...` )
+  * If your tilesheet doesn't have one, simply use the `UISprite` image or make the Player from scratch with a 2D primitive shape (right-click in the **Hierarchy** and select `2D Objects > Sprite >...` )
 * Add a `Rigidbody 2D` to your player
   * Ensure it's type is `Dynamic`
   * Set `Gravity Scale` to `0`
@@ -274,6 +271,7 @@ From here, the seams will be fixed, but your level will likely suddenly become b
 * Set `Max Texture Size` to `128` (do not make it higher than 512)
 * Ensure `Format` is set to `Automatic`
 * Set `Compression` to `None`
+* Change `Sprite Filtering Mode` to `Point` (this is usually the main cause of blurry sprites)
 
 You will be prompted to save your Sprite Atlas when clicking away, press `Save`. Play your game and test if the seams still appear
 
@@ -293,23 +291,22 @@ You will notice that in your tilemap editor, you should now see a *slight* outli
 
 Make any further edits you wish to your tilemap, and go back to Unity.
 
-Add the following components to any tilemap layers that have collision - make sure they are on the same objects that contain a `Tilemap` component:
-* `Tilemap Collider 2D`
-* `Rigidbody 2D`
-  * Set `Body Type` to `Static`
+Before playing your game, Add a`Tilemap Collider 2D` to any tilemap layers that you want to have collision - you can tell which children they will be as they will have a `Tilemap` component:
 
-Play your game and you should now not be able to bypass your walls
+<img src="PracResources\images\xx_TilemapCol.png">
 
-Note: During testing you may want to reshape some colliders (like the player sprite, as it may be a bit too wide of a collider), and you may also want to see the colliders of your tilemap in game.
+Play your game and you should now not be able to walk through your wall tiles
 
-Selecting the Tilemap Layer in the Unity **Hierarchy** is a reasonable way to go about this. The easiest way to get a visual of the colliders of your tilemap in Unity is definitely briefly changing your view mode to `Wireframe Draw mode`, and selecting the object you wish to check colliders for.
+Note: While developing, you may want to reshape some colliders (e.g. like the player sprite, as it may be a bit too wide of a collider). It would be quite helpful if we could easily see our colliders when doing this.
+
+Selecting the Tilemap Layer in the Unity **Hierarchy** is a reasonable way to go about getting this information. However, probably the best way to get a visual of the colliders of your tilemap in Unity is definitely briefly changing your view mode to `Wireframe Draw mode`, and selecting the object you wish to check colliders for.
 
 <img src="PracResources\images\11_WireframeDrawMode.png">
 <img src="PracResources\images\12_ColliderWireframe.png">
 
 ### Adjustments to your Tilemap - Order in Layer
 
-You may find the player dissappearing behind certain objects. In the Player `Sprite Renderer`, and each tilemap layers `Tilemap Renderer`, check that the `Order in Layer` ordering is correct. 
+You may find the player disappearing behind certain objects. In the Player `Sprite Renderer`, and each tilemap layers `Tilemap Renderer`, check that the `Order in Layer` ordering is correct.
 
 This was covered in the first few pracs, so this won't be covered in detail. Just remembered that the highest number appears at the top. If you want your player to stand over your foreground, make sure its `Order in Layer` is higher than the other layers.
 
@@ -323,7 +320,7 @@ In **Tiled**, navigate to your Tilesheet and select an unused tile, ideally one 
 
 <img src="PracResources\images\13_TinydungeonHazardTile.png">
 
-Add a collider to your tile like normal. Once you've done that, look over to the **Properties** window in Tiled. If you have accidentally closed that window, you can open it back up by navigating to the top menu bar, and selecting `Tileset > Tileset Properties`.
+Add a collider to your chosen hazard tile like previously. Once you've done that, look over to the **Properties** window in Tiled. If you have accidentally closed that window, you can open it back up by navigating to the top menu bar, and selecting `Tileset > Tileset Properties`.
 
 Right-click the `Custom Properties` header at the bottom, and select `+ Add Property`. You will see this popup window:
 
@@ -331,13 +328,13 @@ Right-click the `Custom Properties` header at the bottom, and select `+ Add Prop
 
 Whichever tile you have chosen, we will be putting it on its own layer and marking it as a trigger - Tiled will automatically do this for us when we save our tilesheet.
 
-In the popup window, type `unity:IsTrigger`. Check the spelling, then press `OK`. You will then be prompted to type a value in to the newly created field in the **Custom Properties** window. Type `Hazard` in to this field.-
+In the popup window, type `unity:layer`. Check the spelling, then press `OK`. You will then be prompted to type a value in to the newly created field in the **Custom Properties** window. Type `Hazard` in to this field.-
 
 It should look like this if completed correctly
 
 <img src="PracResources\images\15_unityIsHazard.png">
 
-Repeat that process, but this time make the name `unity:layer`, and the value `true`
+Repeat that process, but this time make the name `unity:IsTrigger`, and the value `true`
 
 <img src="PracResources\images\16_unitylayer.png">
 
@@ -345,7 +342,15 @@ Save your tilesheet, then place that new tile in your tilemap (on any layer you 
 
 If you were to select the layer on your tilemap, and then expand the parent object completely (Hold `Alt` while clicking the `>` arrow on the layer name), you should notice that there is a new object called `Collision_Hazard`. Selecting the object should also highlight the collision tiles placed in your Scene.
 
+<img src="PracResources\images\xx_TriggerTileHighlight.png">
+
 To test this, add some functionality to your Player Script to check if it is colliding with the "Hazard" layer. You should have a good idea on how to do this already.
+
+
+|   | Regenerate nodes                                                                                                                                                                                               |   |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+|   | Since this is a fresh repository with custom nodes being placed in, make sure you regenerate your nodes if you you cannot find certain nodes --`Edit > Project Settings > Visual Scripting > Regenerate nodes` |   |
+|   |                                                                                                                                                                                                                |   |
 
 Once you've finished developing that, test and see if it works. If it does not, check the following:
 
@@ -355,7 +360,7 @@ Once you've finished developing that, test and see if it works. If it does not, 
 
 Once you've got that working, copy and paste the logic, but instead link it up to an `OnTriggerStay2D` event node.
 
-You should end up with something like this when you're done
+You should end up with something like this when you're done:
 
 <img src="PracResources\images\17_TriggerLogicHealth.png">
 
@@ -371,7 +376,7 @@ We're now going to add some health to the player, and track it using some text. 
 
 To get started with this:
 
-* In your Hierarchy Right Click -> Create `Text - TextMeshPro`
+* In your **Hierarchy** right click & Select `UI > Text-TextMeshPro`
 * A popup window will appear, asking you to install "**Text Mesh Pro**". Select `Import TMP Essentials`, and once it is done, close the popup window
 
 You will now have a text object on the screen of your game, keep in mind that this does not exist within the play space.
@@ -383,17 +388,19 @@ Note that when modifying text, the "box" it appears in represents your entire sc
 To make our health system work with our hazard system, we'll only need to add the following variables to our player.
 
 Add these variables:
+
 * `healthValue` (Type: `Integer`) - make this a number larger than 10 since we are losing health every frame/in OnTriggerStay. I picked 99
 * `healthText` (Type: `TM Pro > Text Mesh Pro UGUI`) - this will contain the reference for our text field
 
 The logic is quite straightforward, and will not be anything challenging:
 
-1.  Use our already existing functions for `OnTriggerEnter/Stay`, but simply delete the Debug Logs
+1. Use our already existing functions for `OnTriggerEnter/Stay`, but simply delete the Debug Logs
 2. Once those are deleted, hook the output triggers for both of these to a new `SetVariable` node, where `healthValue` is being set
 3. Get the current `healthValue` node, and subtract 1. The output of this subtract node should be setting our previously created `Set Variable`-`healthValue` node.
 
 Once you've done that, to update the text:
-1.  Drag the output flow to a `Text Mesh Pro UGUI: Set Text` Node
+
+1. Drag the output flow to a `Text Mesh Pro UGUI: Set Text` Node
 
 This node looks like this:
 
@@ -416,6 +423,7 @@ Save and Play, and check that this works.
 If you try to resize your **Game** window, you will notice that the text goes off of the screen. This is where **Anchoring** and **UI Scale** come in.
 
 To fix this:
+
 * On the **Canvas** object that was created before, find the `Canvas Scaler` component, and set it's `UI Scale Mode` to `Scale With Screen Size`
   * Underneath this, give it an appropriate `Reference Resolution`. Typically you should give one suitable for the aspect ratio you are playing in (e.g. 16:9 screens can simply use x`1920`y`1080`)
   * While you're here, change `Reference pixels per unit` to whatever your tilesets are using
@@ -440,7 +448,6 @@ Add some logic in to your `Player` script, that determines whether they should b
 
 For this challenge, it is recommended to change the `Flip` tickboxes in the **Player** `Sprite Renderer`. You will also likely want to be tracking this with a boolean variable on the player
 
-
 ## Moderate Challenge - Add an Invulnerability Window/Timer after Taking Damage from a Hazard
 
 Create a performance efficient timer that gives players a limited time invulnerability for taking damage, for a certain amount of time. Please consider the following:
@@ -449,19 +456,6 @@ Create a performance efficient timer that gives players a limited time invulnera
 * The health UI should correctly reflect the players current health, and should not tick down outside of their invulnerability window
 * The timer *must not* tick down every frame - this timer should not exist in "Update"
 
-Tasks:
-
-* Download a tilesheet from Kenney.NL (e.g. Tiny Town / Tiny Dungeon)
-* Use multiple layers to represent traversable & solid level architecture.
-* Make a basic tilemap in Tiled.
-* Import your tilemap in to Unity using [SuperTiled2Unity](https://seanba.itch.io/supertiled2unity)
-* Adding TilemapCollider & CompositeColider - Note that the Tile Collider Type in the TSX importer should be set to Sprite as the Grid setting offsets the collider incorrectly.
-* Camera as child of player avatar
-* Add hazards as trigger colliders which cause damage.
-* Add a UI to track damage (as a "score")
-* Using anchors & pivots to position UI elements
-* Test in different screen aspect ratios etc.
-
 ## Completed Tasks
 
 To verify that you've completed all of the content in this prac, check you have done the following:
@@ -469,7 +463,7 @@ To verify that you've completed all of the content in this prac, check you have 
 * Downloaded a tilesheet from Kenney.NL (e.g. Tiny Town / Tiny Dungeon)
 * Made a basic tilemap in Tiled.
 * Imported your tilemap in to Unity using [SuperTiled2Unity](https://seanba.itch.io/supertiled2unity)
-* Added a TilemapCollider & CompositeColider
+* Added a TilemapCollider to your Tiled Tilemaps
 * Made the camera a child of the player avatar
 * Added hazards as trigger colliders which cause damage
 * Added a UI to track damage [Raw number & Slider]
